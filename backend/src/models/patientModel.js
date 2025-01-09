@@ -19,6 +19,8 @@ const patientSchema = Schema(
   { timestamps: true }
 );
 
+patientSchema.index({ name: 1, roomNumber: 1, bedNumber: 1 }, { unique: true });
+
 const patientModel = model('patient', patientSchema);
 
 export default patientModel;

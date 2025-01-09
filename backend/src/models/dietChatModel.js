@@ -15,6 +15,8 @@ const dietChartSchema = Schema(
   { timestamps: true }
 );
 
+dietChartSchema.index({ patientId: 1 }, { unique: true });
+
 const dietChartModel = model('diet_chart', dietChartSchema);
 
 export default dietChartModel;
