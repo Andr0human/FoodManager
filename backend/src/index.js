@@ -1,9 +1,9 @@
-import express from 'express';
 import cors from 'cors';
+import express from 'express';
 import morgan from 'morgan';
-import router from './routes.js';
-import connectDb from './database.js';
 import config from './config.js';
+import connectDb from './database.js';
+import router from './routes/index.js';
 
 const app = express();
 
